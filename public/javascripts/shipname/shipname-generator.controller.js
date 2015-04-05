@@ -14,7 +14,7 @@
 
     function getTag(value) {
       var hash = $cryptojs.md5(value);
-      return (hash) ? hash.substr(hash.length - 3) : '???';
+      return (hash) ? hash.toString().substr(hash.length - 3) : '???';
     }
 
     function onInputNameChange(value) {
