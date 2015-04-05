@@ -4,10 +4,23 @@
     <title>Ira - Eve Tools</title>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.6/angular.min.js"></script>
+    <script src="/javascripts/application/angular.extensions.js"></script>
+    <script src="/javascripts/application/ira.naming.module.js"></script>
     <script src="/javascripts/application/app.module.js"></script>
     <script src="/javascripts/home/home.controller.js"></script>
+    <script src="/javascripts/shipname/crypto-wrapper.constant.js"></script>
+    <script src="/javascripts/shipname/shipname-generator.controller.js"></script>
+    <script src="/javascripts/shipname/shipname-generator.directive.js"></script>
   </head>
   <body ng-controller="HomeController as home">
-    <h1>{{home.message}}</h1>
+    <h1>Ira <small>Eve Toos</small></h1>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">Shipname Tag Generator</div>
+      <div class="panel-body">
+        <ira-shipname-generator></ira-shipname-generator>
+      </div>
+    </div>
+
   </body>
 </html>

@@ -1,9 +1,7 @@
 (function(ng) {
-  ng.module('app', []);
+  var dependencies = [
+    'ira.naming'
+    ];
 
-  ng.registerManifest = function(manifest, implementation) {
-    implementation.$inject = manifest.dependencies;
-    ng.module(manifest.module)[manifest.type](manifest.name, implementation);
-  };
-
+  ng.module('app', dependencies);
 }(angular))
