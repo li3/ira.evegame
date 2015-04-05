@@ -13,5 +13,5 @@
     self.message = "Hello world from AngularJs!";
   };
 
-  ng.registerManifest(manifest, dependencies);
+  ng.registerManifest(manifest, implementation);
 }(angular))
