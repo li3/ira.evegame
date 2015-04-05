@@ -15,12 +15,13 @@
     <script src="/javascripts/shipname/shipname-generator.directive.js"></script>
   </head>
   <body class="container" data-ng-controller="HomeController as home">
-    <h1>Ira <small>Eve Toos</small></h1>
+    <h1>Ira <small>Eve Tools</small></h1>
 
     <div class="panel panel-default">
       <div class="panel-heading">Shipname Tag Generator</div>
       <div class="panel-body">
-        <div data-ira-shipname-generator=""></div>
+        <!--<div data-ira-shipname-generator=""></div>-->
+        {{home.message}}
       </div>
     </div>
 
