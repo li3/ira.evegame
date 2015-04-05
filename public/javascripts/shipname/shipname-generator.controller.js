@@ -3,23 +3,17 @@
     name: "ShipnameGeneratorController",
     type: "controller",
     module: 'ira.naming',
-    dependencies: ['$scope', '$cryptojs']
+    dependencies: ['$scope', 'shipnameGeneratorService']
   };
 
-  var implementation = function($scope, $cryptojs) {
+  var implementation = function($scope, shipnameGeneratorService) {
     var self = this;
 
     self.name = '';
     self.formatted = '';
 
-    function getTag(value) {
-      var hash = $cryptojs.md5(value);
-      return (hash) ? hash.toString().substr(hash.length - 3) : '???';
-    }
-
     function onInputNameChange(value) {
-      var tag = getTag(value);
-      self.formatted = '[' + tag + '] ' + value;
+      self.formatted = shipnameGeneratorService.formatName(value);
     }
 
     function activate() {

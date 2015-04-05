@@ -10,6 +10,7 @@
     <script src="/javascripts/application/app.module.js"></script>
     <script src="/javascripts/home/home.controller.js"></script>
     <script src="/javascripts/shipname/crypto-wrapper.constant.js"></script>
+    <script src="/javascripts/shipname/shipname-generator.factory.js"></script>
     <script src="/javascripts/shipname/shipname-generator.controller.js"></script>
     <script src="/javascripts/shipname/shipname-generator.directive.js"></script>
   </head>
