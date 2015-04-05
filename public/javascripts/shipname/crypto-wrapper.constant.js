@@ -9,7 +9,7 @@
 
   var implementation = {
     md5: function(value) {
-      return '???';
+      return (value) ? window.CryptoJS.MD5(value) : '???';
     }
   }
 
