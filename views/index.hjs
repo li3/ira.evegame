@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="app" ng-strict-di="">
+<html ng-app="app" ng-strict-di>
   <head>
     <title>Ira - Eve Tools</title>
     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
@@ -10,11 +10,14 @@
     <script src="/javascripts/application/ira.naming.module.js"></script>
     <script src="/javascripts/application/app.module.js"></script>
     <script src="/javascripts/home/home.controller.js"></script>
-    <script src="/javascripts/shipname/crypto-wrapper.constant.js"></script>
-    <script src="/javascripts/shipname/select-onclick.directive.js"></script>
+    <script src="/javascripts/shared/crypto-wrapper.constant.js"></script>
+    <script src="/javascripts/shared/select-onclick.directive.js"></script>
     <script src="/javascripts/shipname/shipname-generator.factory.js"></script>
     <script src="/javascripts/shipname/shipname-generator.controller.js"></script>
     <script src="/javascripts/shipname/shipname-generator.directive.js"></script>
+    <script src="/javascripts/dscan/dscan-parser.factory.js"></script>
+    <script src="/javascripts/shipname/shipname-validator.controller.js"></script>
+    <script src="/javascripts/shipname/shipname-validator.directive.js"></script>
   </head>
   <body class="container" ng-controller="HomeController as home">
     <h1>Ira <small>Eve Tools</small></h1>
@@ -23,6 +26,13 @@
       <div class="panel-heading">Shipname Tag Generator</div>
       <div class="panel-body">
         <div ira-shipname-generator></div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">Directional Scanner Shipname Validator</div>
+      <div class="panel-body">
+        <div ira-shipname-validator></div>
       </div>
     </div>
 
