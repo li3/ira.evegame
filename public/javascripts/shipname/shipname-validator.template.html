@@ -4,16 +4,21 @@
 </div>
 <div class="form-group">
   <label>Parsed Results</label>
-  <table class="table">
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Distance</th>
-    </tr>
-    <tr ng-repeat="item in validator.results">
-      <td>{{item.name}}</td>
-      <td>{{item.type}}</td>
-      <td>{{item.distance}}</td>
-    </tr>
-  </table>
+  <button class="btn btn-default pull-right" ng-click="validator.toggleFilterState()">{{validator.filterState}}</button>
+  <div class="form-group">
+    <table class="table">
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Distance</th>
+        <th>Valid</th>
+      </tr>
+      <tr ng-repeat="item in validator.filtered | filter:{show:true} | orderBy:['type', 'name']">
+        <td>{{item.name}}</td>
+        <td>{{item.type}}</td>
+        <td>{{item.distance}}</td>
+        <td>{{item.valid}}</td>
+      </tr>
+    </table>
+  </div>
 </div>
