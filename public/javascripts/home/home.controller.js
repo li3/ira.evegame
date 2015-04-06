@@ -9,8 +9,7 @@
 
   var implementation = function() {
     var self = this;
-
-    self.message = "Hello world from AngularJs!";
+    self.message = "Hello world from AngularJs?";
   };
 
   ng.registerManifest(manifest, implementation);

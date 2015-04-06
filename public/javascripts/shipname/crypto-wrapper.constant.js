@@ -9,7 +9,7 @@
 
   var implementation = {
     md5: function(value) {
-      return (value) ? 'xxx' : null; //window.CryptoJS.MD5(value) : null;
+      return (value) ? window.CryptoJS.MD5(value) : null;
     }
   }
 
