@@ -1,10 +1,9 @@
 <div class="form-group">
-  <label>Direction Scan Results</label>
+  <label>Direction Scan Results</label> - <a class="pointable" ng-click="validator.clearDscanInput()"><i class="fa fa-trash-o"></i> Clear</a>
   <textarea class="form-control" ng-model="validator.dscan"></textarea>
 </div>
-<div class="form-group">
-  <label>Parsed Results</label>
-  <button class="btn btn-default pull-right" ng-click="validator.toggleFilterState()">{{validator.filterState}}</button>
+<div class="form-group" ng-show="validator.filtered.length > 0">
+  <label>Parsed Scan Results</label> - <a class="pointable" ng-click="validator.toggleFilterState()"><i class="fa fa-eye"></i> {{validator.filterState}}</a>
   <div class="form-group">
     <table class="table">
       <tr>

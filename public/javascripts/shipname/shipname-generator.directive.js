@@ -14,7 +14,7 @@
       controller: 'ShipnameGeneratorController',
       controllerAs: 'shipnameGenerator',
       templateUrl: '/javascripts/shipname/shipname-generator.template.html'
-    }
+    };
   };
 
   ng.registerManifest(manifest, implementation);

@@ -14,7 +14,7 @@
       controller: 'ShipnameValidatorController',
       controllerAs: 'validator',
       templateUrl: '/javascripts/shipname/shipname-validator.template.html'
-    }
+    };
   };
 
   ng.registerManifest(manifest, implementation);

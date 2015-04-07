@@ -15,6 +15,9 @@
       
       for(var i = 0; i < lines.length; i++) {
         var line = lines[i];
+        if (!line)
+          continue;
+        
         var values = line.split('\t');
         var row = {
           name: values[0],

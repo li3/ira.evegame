@@ -14,13 +14,17 @@
     self.filtered = [];
     self.filterState = 'Ships Only'
 
+    self.clearDscanInput = function() {
+      self.dscan = '';
+    };
+
     self.toggleFilterState = function() {
       if (self.filterState === 'Ships Only') {
         self.filterState = 'Show All'
       } else {
         self.filterState = 'Ships Only'
       }
-    }
+    };
 
     self.filterResults = function() {
       self.filtered = self.results;
@@ -33,7 +37,7 @@
           self.filtered[i].show = (shipTypes.indexOf(type) >= 0);
         }
       }
-    }
+    };
 
     function parseFullname(value) {
       // todo: finish
