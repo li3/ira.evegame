@@ -1,3 +1,7 @@
 .pointable {
   cursor: pointer;
 }
+
+tr.has-success td {
+  background-color: #8AC8CE;
+}

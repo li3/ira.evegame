@@ -12,7 +12,8 @@
         <th>Distance</th>
         <th>Valid</th>
       </tr>
-      <tr ng-repeat="item in validator.filtered | filter:{show:true} | orderBy:['type', 'name']">
+      <tr ng-repeat="item in validator.filtered | filter:{show:true} | orderBy:['type', 'name']"
+        ng-class="{'has-success': item.valid}">
         <td>{{item.name}}</td>
         <td>{{item.type}}</td>
         <td>{{item.distance}}</td>

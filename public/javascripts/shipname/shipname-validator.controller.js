@@ -40,10 +40,9 @@
     };
 
     function parseFullname(value) {
-      // todo: finish
       return {
-        name: 'name-segment',
-        tag: 'tag-segment'
+        name: value.substring(6, value.length),
+        tag: value.substring(0, 5)
       };
     }
 
@@ -51,7 +50,7 @@
       var parsed = parseFullname(value);
       var generatedName = shipnameGeneratorService.formatName(parsed.name);
       var valid = (generatedName === value);
-      return true;
+      return valid;
     }
 
     function onDscanChange(value) {
