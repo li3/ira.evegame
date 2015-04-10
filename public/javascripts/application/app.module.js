@@ -1,5 +1,7 @@
 (function(ng) {
   var dependencies = [
+    'ui.router',
+    'ira',
     'ira.naming'
     ];
 
