@@ -1,0 +1,24 @@
+<div class="form-group">
+  <label>Direction Scan Results</label> - <a class="pointable" ng-click="validator.clearDscanInput()"><i class="fa fa-trash-o"></i> Clear</a>
+  <textarea class="form-control" ng-model="validator.dscan"></textarea>
+</div>
+<div class="form-group" ng-show="validator.filtered.length > 0">
+  <label>Parsed Scan Results</label> - <a class="pointable" ng-click="validator.toggleFilterState()"><i class="fa fa-eye"></i> {{validator.filterState}}</a>
+  <div class="form-group">
+    <table class="table">
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Distance</th>
+        <th>Valid</th>
+      </tr>
+      <tr ng-repeat="item in validator.filtered | filter:{show:true} | orderBy:['type', 'name']"
+        ng-class="{'has-success': item.valid}">
+        <td>{{item.name}}</td>
+        <td>{{item.type}}</td>
+        <td>{{item.distance}}</td>
+        <td>{{item.valid}}</td>
+      </tr>
+    </table>
+  </div>
+</div>
