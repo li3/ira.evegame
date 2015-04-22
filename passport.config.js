@@ -10,7 +10,7 @@ module.exports = function(app, passport) {
     rhc set-env EVE_CREST_CLIENT_SECRET=<client_secret> -a <name>
   */
 
-  if (!callbackURL)
+  if (!callbackUrl)
     throw 'No callback url specified';
 
   if (!clientId)
