@@ -5,8 +5,6 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var passport = require('passport');
-var request = require('request');
-var OAuth2Strategy  = require('passport-oauth').OAuth2Strategy;
 
 var app = express();
 app.locals.delimiters = '<% %>'; // changing the delim for hogan

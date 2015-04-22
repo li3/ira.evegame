@@ -1,4 +1,7 @@
 module.exports = function(app, passport) {
+  var request = require('request');
+  var OAuth2Strategy  = require('passport-oauth').OAuth2Strategy;
+  
   var callbackUrl = process.env.EVE_CREST_CALLBACK_URL
   var clientId = process.env.EVE_CREST_CLIENT_ID
   var clientSecret = process.env.EVE_CREST_CLIENT_SECRET
