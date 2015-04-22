@@ -14,5 +14,12 @@
   </head>
   <body class="container">
     <div data-ui-view></div>
+
+    <h4>Request <small>Is Working: <% working %></small></h4>
+    <pre>
+      <code>
+<% request %>
+      </code>
+    </pre>
   </body>
 </html>

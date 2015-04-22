@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-strict-di>
+  <head>
+    <title>Unauthorized</title>
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+<body class="container">
+  <h1>Yeah, no... <small>that didn't work</small></h1>
+</body>
+</html>

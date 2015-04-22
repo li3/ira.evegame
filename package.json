@@ -17,6 +17,8 @@
     "node-compass": "0.2.3",
     "passport": "^0.2.1",
     "passport-eveonline": "^0.1.1",
+    "passport-oauth": "^1.0.0",
+    "request": "^2.55.0",
     "serve-favicon": "~2.2.0"
   },
   "devDependencies": {
@@ -24,6 +26,7 @@
     "gulp-concat": "^2.5.2",
     "gulp-jshint": "^1.10.0",
     "gulp-uglifyjs": "^0.6.1",
-    "jshint-stylish": "^1.0.1"
+    "jshint-stylish": "^1.0.1",
+    "passport-oauth": "^1.0.0"
   }
 }

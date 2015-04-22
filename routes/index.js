@@ -1,9 +1,20 @@
-var express = require('express');
-var router = express.Router();
+module.exports = function(app, passport) {
+  /* GET home page. */
+  app.get('/', function(req, res, next) {
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', {});
-});
+    var cache = [];
+    var convertedRequest = JSON.stringify(req, function(key, value) {
+      if (typeof value === 'object' && value !== null) {
+        if (cache.indexOf(value) !== -1) {
+          return;
+        }
+        cache.push(value);
+      }
 
-module.exports = router;
+      return value;
+    }, 2);
+
+    res.render('index', { working: 'yes', request: convertedRequest});
+  });
+
+};

@@ -5,13 +5,13 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var passport = require('passport');
-var passportEve = require('passport-eveonline');
-
-var routes = require('./routes/index');
-var users = require('./routes/users');
+var request = require('request');
+var OAuth2Strategy  = require('passport-oauth').OAuth2Strategy;
 
 var app = express();
 app.locals.delimiters = '<% %>'; // changing the delim for hogan
+
+require('./passport.config.js')(app, passport);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -25,9 +25,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 //app.use(require('node-compass')({mode: 'expanded'}));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(passport.initialize());
 
-app.use('/', routes);
-app.use('/users', users);
+require('./routes/routes.js')(app, passport);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
